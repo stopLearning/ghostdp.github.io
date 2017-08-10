@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #biaoDan{
+            width: 300px;
+            background-color: whitesmoke;
+        }
+        #biaoDan input[type="submit"]{
+            border-color: rgb(157,196,95);
+            color: white;
+            width: 50px;
+            background-color: rgb(157,196,95);
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    </style>
+    <script>
+//        function jieSha_ochange(This){
+//            var str =  This.value;
+//            console.log(str);
+//             var newStr =str.replace(/\d{5,11}/g,"******");
+//            console.log(newStr);
+//               This.value =newStr;
+//        }
+        window.onload =function(){
+            //获取表单元素
+            var biaoDan =document.getElementById("biaoDan");
+            var name =document.getElementById("name");
+            var niCheng =document.getElementById("niCheng");
+            var passWord =document.getElementById("passWord");
+            var age =document.getElementById("age");
+            var email =document.getElementById("email");
+            var phone =document.getElementById("phone");
+            //屏蔽关键字
+            var jieShao =document.getElementById("jieShao");
+            //设置正则;
+            var reg_name =/[\w\d\-\_]{8,12}/;
+            var reg_niCheng =/^[\u4e00-\u9fa5]{4,80}$/;
+            var reg_passWord =/^[a-zA-Z]\w{5,17}$/;
+            var reg_age =/^([0-9]|[0-9]{2}|100)$/;
+            var reg_phone =/^1(3|4|5|7|8)\d{9}$/;
+            var reg_email =/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/;
+            //设置验证
+            biaoDan.addEventListener('submit',function(e){
+                var Br =(!reg_name.test(name.value) && !reg_niCheng.test(niCheng.value && !reg_passWord.text(passWord.value) && !reg_age.text(age.value)
+                                && !reg_phone.text(phone.value) && !reg_email.text(email.value)));
+                 if(Br){
+                     e.preventDefault();
+                     alert("请重新输入")
+                 }
+                });
+            setInterval(function(){
+                    var str =  jieShao.value;
+                    var newStr =str.replace(/\d{5,11}/g,"******");
+                    jieShao.value =newStr;
+                },100)
+        }
+
+    </script>
+</head>
+<body>
+<div id="biaoDan">
+    <form action="#" method="get" id="form" >
+        <p><label for="name">用户名</label></p>
+        <p><input type="text" id="name" name="name"></p>
+        <p><label for="niCheng">昵称</label></p>
+        <p><input type="text" id="niCheng" name="niCheng"></p>
+        <p><label for="passWord">密码</label></p>
+        <p><input type="password" id="passWord" name="passWord"></p>
+        <p><label for="age">年龄</label></p>
+        <p><input type="text" id="age" name="age"></p>
+        <p><label for="email">邮箱</label></p>
+        <p><input type="text" id="email"></p>
+        <p><label for="phone">手机</label></p>
+        <p><input type="text" id="phone"></p>
+        <p><label for="jieShao">自我介绍(屏蔽qq)</label></p>
+        <p><textarea name="jieShao" id="jieShao" cols="30" rows="10" maxlength="255"></textarea></p>
+        <input type="submit">
+    </form>
+</div>
+
+</body>
+</html>

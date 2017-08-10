@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;padding: 0;
+        }
+        #Top20{
+            margin: 0 auto;
+            background-color:beige ;
+            width: 800px;
+        }
+        .move{
+            padding: 20px;
+            border: 1px solid #b9def0;
+            float: left;
+         width: 120px;
+            height: 210px;
+        }
+        .yuHao{
+            text-align: center;
+            font-size: 12px;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            //创建Ajax对象
+            function Ajax(fn){
+                var ajax = new XMLHttpRequest();
+                ajax.open("get", "https://api.douban.com/v2/movie/top250", true);
+                ajax.send();
+                ajax.onreadystatechange = function () {
+                    if (ajax.readyState == 4) {
+                        if (ajax.status == 200) {
+                            //根据服务器返回的状态码 执行不同操作
+                            fn(JSON.parse(ajax.responseText));
+                        }
+                    }
+                };
+            }
+            function caoZuo(obj) {
+                var ajax = obj;
+                var oDiv = document.getElementById("Top20");
+                console.log(ajax);
+                console.log(ajax.subjects[0].title);
+                console.log(oDiv);
+                var inner ="";
+                for(var i=0;i<ajax.subjects.length;i++){
+                     inner+='<div class="move">'+
+                            '<div class="img">'+
+                            '<img src='+ajax.subjects[i].images.medium+' alt="" width="96" height="155">'+
+                            '</div>'+
+                            '<div class="info">'+
+                            '<div class="name">'+ajax.subjects[i].title+'</div>'+
+                            '<div class="pingFen">豆瓣:'+ajax.subjects[i].rating.average+'</div>'+
+                             '<div class="yuHao">'+i+'</div>'+
+                            '</div></div>';
+                }
+                oDiv.innerHTML =inner;
+            }
+            Ajax(caoZuo);
+        }
+    </script>
+</head>
+<body>
+<h1 style="text-align: center">豆瓣电影评分榜前20</h1>
+    <div id="Top20">
+    </div>
+</body>
+</html>

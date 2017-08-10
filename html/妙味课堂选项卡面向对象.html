@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1 div{
+            width: 200px;
+            height: 200px;
+            border: 1px #000 solid;
+            display: none;
+        }
+        .active{
+        background:red;
+        }
+    </style>
+    <script>
+//        var oParent;
+//        var oINput;
+//        var oDiv;
+//        window.onload = function(){
+//            oParent = document.getElementById("div1");
+//            oInput =document.getElementsByTagName("input");
+//            oDiv = document.getElementsByTagName("div");
+//            init();
+//        };
+//        var init =function(){
+//            for(var i=0;i<oInput.length;i++){
+//                oInput[i].index=i;
+//                oInput[i].onclick=change;
+//            }
+//        };
+//        var change=function(){
+//            for( var i=0;i<oInput.length;i++){
+//                oInput[i].className='';
+//                oDiv[i].style.display ='none';
+//            }
+//            this.className ="active";
+//            oDiv[this.index].style.display ="block";
+//        };
+        window.onload =function() {
+            var ti = new Tab();
+            ti.init();
+        };
+        function Tab(){
+            this.oParent = document.getElementById("div1");
+            this.oInput =document.getElementsByTagName("input");
+            this.oDiv = document.getElementsByTagName("div");
+            Tab.prototype.init=function() {
+                var This =this;
+                for (var i = 0; i < this.oInput.length; i++) {
+                    this.oInput[i].index = i;
+                    this.oInput[i].onclick = function(){
+                        This.change(this);
+                    };
+                }
+            };
+            Tab.prototype.change=function(obj){
+                for( var i=0;i<this.oInput.length;i++){
+                    this.oInput[i].className='';
+                    this.oDiv[i].style.display ='none';
+                }
+                obj.className ="active";
+                this.oDiv[obj.index].style.display ="block";
+            };
+         }
+    </script>
+</head>
+<body>
+<header id="div1">
+    <input type="button" class="active" value="1">
+    <input type="button" value="2">
+    <input type="button" value="3">
+    <div style="display: block">11111</div>
+    <div>2222</div>
+    <div>3333</div>
+</header>
+</body>
+</html>
