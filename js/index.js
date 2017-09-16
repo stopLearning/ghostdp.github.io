@@ -72,7 +72,7 @@ $.make2048=function(id,c_option){
       'position': 'relative'
     });
     var all_bg_box=[];
-    for(var i = 0; i < d_option.width * d_option.height;i++){
+    for(var i = 0; i < option.width * option.height;i++){
       var coordinate =get_coordinate(i);
       var pos = get_pos(coordinate.x,coordinate.y);
       var bg_box =$('<div></div>');
