@@ -1,39 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>2048游戏</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <style>
-          *{
-            margin: 0;padding: 0
-          }
-          h1{
-            text-align: center
-          }
-          body{
-            -moz-user-select: none;  
-            -webkit-user-select: none;  
-            -ms-user-select: none;  
-            -khtml-user-select: none;  
-            user-select: none;  
-            background-image: url('./img/1-16041Q91924.jpg')
-          }
-          .main>div{
-            margin:50px auto;
-          }
-        </style>
-    </head>
-    <body>
-        <p><a href="./index2.html">vue仿智联招聘</a></p>
-        <h1>2048小游戏</h1>
-        <div class="main">
-          <div id="game2048"></div>
-        </div>
-        <script src="js/jquery.js"></script>
-        <script src="js/index.js"></script>
-        <script>
-        var a= $.make2048("#game2048",{width:4,height:4});
-        </script>
-    </body>
+  <head>
+    <meta charset="utf-8">
+    <title>my-project-name</title>
+    <link rel="stylesheet" href="./static/normalize.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,
+      maximun-scale=1.0,minimun-scale=1.0,user-scalable=no ">
+  </head>
+  <body>
+    <!-- <link rel="stylesheet" href="/node_modules/vue-swipe/dist/vue-swipe.css"> -->
+    <div id="app"></div>
+    <script src="./dist/build.js"></script>
+  </body>
 </html>
