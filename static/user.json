@@ -1,0 +1,20 @@
+{
+  "userName": "李成杰",
+  "userAvatar": "./static/img/qq.png",
+  "usermessage":{
+    "userName": "李成杰",
+    "userSex": "男",
+    "birthDate": "1996-2",
+    "takeJob": "",
+    "city": "北京-昌平",
+    "from": "哈尔滨",
+    "phpne": "177****7563",
+    "email": "46670****@qq.com"
+  },
+  "jobExp":{
+    "companyName":"",
+    "Education": "专科",
+    "schoolName": "黑龙江建筑职业技术学院",
+    "professional": "建筑电气"
+  }
+}
