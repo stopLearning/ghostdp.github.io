@@ -4,7 +4,7 @@
       {
         "companyName": "外研科技(北京)有限公司",
         "member": "true",
-        "logo": "./static/img/logo1.jpg",
+        "logo": "../../static/img/logo1.jpg",
         "companyMoney": "1万-2万",
         "companyMessage":
           {
@@ -40,7 +40,7 @@
       {
         "companyName": "腾讯(北京)有限公司",
         "member": "true",
-        "logo": "./static/img/logo2.jpg",
+        "logo": "../../static/img/logo2.jpg",
         "companyMessage": {
           "companyTitle": "WEB前端",
           "companyMoney": "2万-3万",
@@ -78,7 +78,7 @@
       {
         "companyName": "华证万联(北京)科技有限公司",
         "member": "false",
-        "logo": "./static/img/logo3.jpg",
+        "logo": "../../static/img/logo3.jpg",
         "companyMessage": {
           "companyTitle": "WEB前端(node.js方向)",
           "companyMoney": "1.5万-4万",
@@ -114,7 +114,7 @@
       {
         "companyName": "金投手金融信息服务(北京)有限公司 ",
         "member": "true",
-        "logo": "./static/img/logo4.jpg",
+        "logo": "../../static/img/logo4.jpg",
         "companyMessage": {
           "companyTitle": "前端架构师",
           "companyMoney": "3万-4万",

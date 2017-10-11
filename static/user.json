@@ -1,7 +1,7 @@
 {
   "userName": "李成杰",
-  "userAvatar": "./static/img/qq.png",
-  "usermessage":{
+  "userAvatar": "../../static/img/qq.png",
+  "usermessage1":{
     "userName": "李成杰",
     "userSex": "男",
     "birthDate": "1996-2",
@@ -11,6 +11,42 @@
     "phpne": "177****7563",
     "email": "46670****@qq.com"
   },
+  "userMessages": [
+    {
+      "title": "个人信息" ,
+      "userAvatar": "../../static/img/qq.png",
+      "item": [
+        { "name": "姓名:","Value": "李成杰" },
+        { "name": "性别:", "Value": "男" },
+        { "name": "出生日期", "Value": "1992-02"},
+        { "name": "户口所在地", "Value": "黑龙江-哈尔滨" },
+        { "name": "手机号码", "Value": "177****7563" },
+        { "name": "邮箱地址", "Value": "46670****@qq.com" }
+      ]
+    },
+    {
+      "title": "求职意向" ,
+      "item": [
+        { "name": "工作性质:","Value": "全职" },
+        { "name": "工作地点:", "Value": "北京" },
+        { "name": "期望薪金", "Value": "面议"},
+        { "name": "职位类别", "Value": "WEB前端" },
+        { "name": "行业类别", "Value": "计算机软件" },
+        { "name": "工作状态", "Value": "可立即上岗" }
+      ]
+    },
+    {
+      "title": "教育背景" ,
+      "item": [
+        { "name": "学校名称:","Value": "黑龙江建筑职业技术学院" },
+        { "name": "专业名称:", "Value": "建筑电气" },
+        { "name": "学历/学位", "Value": "专科"},
+        { "name": "是否统招", "Value": "统招" },
+        { "name": "入学时间", "Value": "2014-9" },
+        { "name": "毕业时间", "Value": "至今" }
+      ]
+    }
+  ],
   "jobExp":{
     "companyName":"",
     "Education": "专科",
