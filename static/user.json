@@ -1,6 +1,6 @@
 {
   "userName": "李成杰",
-  "userAvatar": "../../static/img/qq.png",
+  "userAvatar": "./static/img/qq.png",
   "usermessage1":{
     "userName": "李成杰",
     "userSex": "男",
